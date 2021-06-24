@@ -2,20 +2,23 @@ body {
         background-color:whitesmoke;
         /*background-image:
         url('https://pro2-bar-s3-cdn-cf.myportfolio.com/67cf45ca-338d-4fd0-943b-32d96162976a/b7b52d14-b827-4c3a-906f-3b94fa13f35f_rw_1920.png')*/;
-    }
-    h1 {
+}
+
+h1 {
         color: #46484c;
         text-align: center;
-    }
-    p {
+}
+
+p {
         color: #8b8b8bcc;
         font-family: verdana;
         font-size: 20px;
-    }
-    button {
+}
+
+button {
         color: #fff;
         background-color: #025157;
-    }
+}
     
     /* *{
         box-sizing: border-box;
@@ -24,96 +27,197 @@ body {
         margin: arriba, izquierda, abajo, derecha
     } 
  */
-    .fixed-header{
+.fixed-header{
         position: fixed;
         background-color: antiquewhite;
         top: 0%;
         left: 0%;
         right: 0%;
-    }
+}
 
-    .header {
+main {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.header {
         margin: 40px 20px 0px 40px;
         font-size: 0;
         line-height: 45px;
         font-family: sans-serif;
-    } 
+} 
 
-    li{
+li{
         display: inline;
-    }
+}
 
-    .header > * {
+.header > * {
         display: inline-block;
         font-size: 16px;
         vertical-align: middle;
         height: 100%;
         line-height: 45px;
-    }
+}
 
-    .logo {
+.logo {
         width:15%;
-    }
+}
 
-    .navbar {
+.navbar {
         width: 70%;
         text-align: left;
         color: #025157;
-    }
-    .menu {
+}
+
+.menu {
         display: inline;
         margin-right: 25px;
         margin-left: 25px;
-    }
-    .actions {
+}
+
+.actions {
         width: 15%;
         text-align: left;
         font-size: 14px;
-    }
-    .actions a {
+}
+
+.actions a {
         color: #67b54b
-    }
-    .actions button {
+}
+
+.actions button {
         color: white;
         background-color: #64b54b;
         padding: 12px 14px;
         border: 0;
         border-radius: 5px;
-    }
-    .promo {
+}
+
+.promo {
         display: flex;
         width: 70%;
         margin 100px auto;
         align-items: center;
-    }
-    .publish {
+}
+
+.publish {
         margin-left: 20px;
-    }
-    .publish h3 {
+}
+
+.publish h3 {
         color:#025157;
         font-family: Helvetica;
         font-size: 30px;
         line-height: 48px;
-    }
-    .publish > p {
+}
+
+.publish > p {
         color: #343434;
         font-size: 18px;
         line-height: 1.5;
         margin-bottom: 20px;
-    }
-    .publish > form {
+}
+
+.publish > form {
         display:flex;
-    }
-    .publish > form p {
+}
+
+.publish > form p {
         color: #025157;
         margin-right: 18px;
-    }
-    .video-imagen {
+}
+
+.video-imagen {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .video-imagen img {
+}
+
+.video-imagen img {
         width: 120px;
         margin-top: 10px;
-    }
+}
+
+.features {
+    display:grid;
+    grid-template: repeat(2,330px)/repeat(2,1fr);
+    background-color: #025157;
+    margin-top: 10px;
+    padding: 5% 10%;
+    /*grid-template-columns: 300px 300px;
+    height: 660px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);*/
+    /*grid-template-columns: 500px 1fr;*/
+    /*grid-template-columns: 1fr 1fr;*/
+}
+
+/*.feature-art {
+    background-color: lightcyan;
+    margin: 10px;
+    width: 500px;
+    height: 400px;
+}*/
+
+.features .feature-art{
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+    margin: 0px 15px 30px 15px;    
+}
+
+.features .feature-art .contenido{
+    padding: 30px 20px 40px 40px;
+    flex: 2;
+}
+
+.features .feature-art .contenido > * {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.features .feature-art .contenido h2{
+    
+    font-size: 24px;
+    color: #343434;
+    font-weight: 400;
+}
+
+.features .feature-art .contenido p{
+    font-size: 16px;
+    color: #7e7e7e;
+    font-weight: 400;
+}
+
+.features .feature-art .contenido a{
+    font-size: 16px;
+    color: #67b54b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.features .feature-art .contenido img{
+    width:50px;
+}
+
+.features .feature-art .imagen{
+    flex:1;
+    width: 40%;
+    position: relative;
+    right: -50xp;
+    height: 80%;
+}
+
+.features .feature-art .imagen figure{
+    margin-top: 0%;
+    height: 100%;
+}
+
+.features .feature-art .imagen img{
+    margin-top: 0%;
+    height: 100%;
+}
