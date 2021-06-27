@@ -12,7 +12,6 @@ h1 {
 p {
         color: #8b8b8bcc;
         font-family: verdana;
-        font-size: 20px;
 }
 
 button {
@@ -29,7 +28,7 @@ button {
  */
 .fixed-header{
         position: fixed;
-        background-color: antiquewhite;
+        background-color: rgb(172, 168, 164);
         top: 0%;
         left: 0%;
         right: 0%;
@@ -138,6 +137,140 @@ li{
         margin-top: 10px;
 }
 
+.postwork {
+    background-color: #a1d683;
+    display: flex;
+    padding: 5% 15%;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+}
+
+.postwork .texto-imagen{
+    padding-right: 100px;
+    flex: 2;
+}
+
+.postwork .texto-imagen h3 {
+    color: #025157;
+    font-size: 51px;
+    line-height: 61px;
+}
+
+.postwork .texto-imagen p{
+    color:#343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.postwork button {
+    font-size: 14px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    padding: 9px,12px;
+    margin-left: 0;
+}
+
+.postwork .texto-imagen img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.postwork .tarjeta{
+    background-color: aliceblue;
+    border-radius: 10px;
+    flex: 1;
+    position: relative;
+    display: flexbox;
+}
+
+.postwork .tarjeta .imagenes{
+    position: unset;
+    max-width: 370px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.postwork .tarjeta .imagenes .colaborador{
+    position: relative;
+}
+
+.postwork .tarjeta .imagenes .colaborador figure{
+    margin: 0;
+}
+
+.postwork .tarjeta .imagenes .colaborador img{
+    width: 100%;
+    max-height: 16vw;  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;  
+}
+
+.postwork .tarjeta .imagenes .compañia{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #f9da73;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.postwork .tarjeta .imagenes .compañia{
+    max-width: 75%;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta{
+    padding: 25px;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta h4{
+    color: #025157;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta h3{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.postwork .tarjeta .resultados{
+    display: flex;
+    align-items: center;    
+}
+
+.postwork .tarjeta .resultados img{
+    width: 26px;
+    margin-right: 20px;
+    padding: 0 0 0 20px;
+}
+
+.postwork .tarjeta .resultados p{
+    margin-top: 0%;
+}
+
+.postwork .tarjeta .final-tarjeta{
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.postwork .tarjeta .final.tarjeta button{
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    width: 100%;
+}
+
 .features {
     display:grid;
     grid-template: repeat(2,330px)/repeat(2,1fr);
@@ -181,7 +314,6 @@ li{
 }
 
 .features .feature-art .contenido h2{
-    
     font-size: 24px;
     color: #343434;
     font-weight: 400;
