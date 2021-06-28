@@ -32,6 +32,7 @@ button {
         top: 0%;
         left: 0%;
         right: 0%;
+        z-index: 1;
 }
 
 main {
@@ -95,26 +96,34 @@ li{
 .promo {
         display: flex;
         width: 70%;
-        margin 100px auto;
+        margin: 100px auto;
         align-items: center;
 }
 
 .publish {
         margin-left: 20px;
+        flex: 1;
 }
 
 .publish h3 {
         color:#025157;
         font-family: Helvetica;
-        font-size: 30px;
+        font-size: 40px;
         line-height: 48px;
+        font-weight: 500;
 }
 
 .publish > p {
         color: #343434;
         font-size: 18px;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
+        margin-top: 15px;
+}
+
+.publish form{
+    height: 55px;
+    padding: 0;
 }
 
 .publish > form {
@@ -126,6 +135,32 @@ li{
         margin-right: 18px;
 }
 
+.publish .sub{
+    color: #8b8b8bcc;
+    margin-top: 15px;
+    margin-bottom: 1rem;
+}
+
+.promo .publish button, input{
+    height: 100%;
+    border-radius: 8px;
+    overflow: visible;
+}
+
+.promo .publish input{
+    border: 1px solid #b6b6b6;
+    width: 60%;
+    max-width: 250px;
+    padding: 0;
+}
+
+.promo .publish button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 6px 20px;
+    margin-left: -10px;
+}
+
 .video-imagen {
         display: flex;
         flex-direction: column;
@@ -135,140 +170,6 @@ li{
 .video-imagen img {
         width: 120px;
         margin-top: 10px;
-}
-
-.postwork {
-    background-color: #a1d683;
-    display: flex;
-    padding: 5% 15%;
-    align-items: center;
-    justify-content: space-around;
-    font-family: "Open Sans", sans-serif;
-}
-
-.postwork .texto-imagen{
-    padding-right: 100px;
-    flex: 2;
-}
-
-.postwork .texto-imagen h3 {
-    color: #025157;
-    font-size: 51px;
-    line-height: 61px;
-}
-
-.postwork .texto-imagen p{
-    color:#343434;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.postwork button {
-    font-size: 14px;
-    border-radius: 8px;
-    height: 45px;
-    font-weight: 600;
-    padding: 9px,12px;
-    margin-left: 0;
-}
-
-.postwork .texto-imagen img {
-    width: 500px;
-    max-width: 100%;
-}
-
-.postwork .tarjeta{
-    background-color: aliceblue;
-    border-radius: 10px;
-    flex: 1;
-    position: relative;
-    display: flexbox;
-}
-
-.postwork .tarjeta .imagenes{
-    position: unset;
-    max-width: 370px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.postwork .tarjeta .imagenes .colaborador{
-    position: relative;
-}
-
-.postwork .tarjeta .imagenes .colaborador figure{
-    margin: 0;
-}
-
-.postwork .tarjeta .imagenes .colaborador img{
-    width: 100%;
-    max-height: 16vw;  
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;  
-}
-
-.postwork .tarjeta .imagenes .compañia{
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: #f9da73;
-    border-radius: 50%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-
-.postwork .tarjeta .imagenes .compañia{
-    max-width: 75%;
-}
-
-.postwork .tarjeta .cuerpo-tarjeta{
-    padding: 25px;
-}
-
-.postwork .tarjeta .cuerpo-tarjeta h4{
-    color: #025157;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 20px;
-    margin-bottom: 12px;
-}
-
-.postwork .tarjeta .cuerpo-tarjeta h3{
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 20px;
-}
-
-.postwork .tarjeta .resultados{
-    display: flex;
-    align-items: center;    
-}
-
-.postwork .tarjeta .resultados img{
-    width: 26px;
-    margin-right: 20px;
-    padding: 0 0 0 20px;
-}
-
-.postwork .tarjeta .resultados p{
-    margin-top: 0%;
-}
-
-.postwork .tarjeta .final-tarjeta{
-    margin-top: 20px;
-    padding: 25px;
-}
-
-.postwork .tarjeta .final.tarjeta button{
-    padding: 12px 20px;
-    font-weight: 600;
-    font-size: 13px;
-    width: 100%;
 }
 
 .features {
@@ -352,4 +253,239 @@ li{
 .features .feature-art .imagen img{
     margin-top: 0%;
     height: 100%;
+}
+
+.postwork {
+    background-color: #a1d683;
+    display: flex;
+    padding: 5% 15%;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+}
+
+.postwork .texto-imagen{
+    padding-right: 100px;
+    flex: 2;
+}
+
+.postwork .texto-imagen h3 {
+    color: #025157;
+    font-size: 51px;
+    line-height: 61px;
+    font-family: Helvetica;
+}
+
+.postwork .texto-imagen p{
+    color:#343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.postwork button {
+    font-size: 14px;
+    border-radius: 8px;
+    height: 45px;
+    font-weight: 600;
+    padding: 9px,12px;
+    margin-left: 0;
+}
+
+.postwork .texto-imagen img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.postwork .tarjeta{
+    background-color: aliceblue;
+    border-radius: 10px;
+    flex: 1;
+    position: relative;
+    display: flexbox;
+}
+
+.postwork .tarjeta .imagenes{
+    position: unset;
+    max-width: 370px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.postwork .tarjeta .imagenes .colaborador{
+    position: relative;
+}
+
+.postwork .tarjeta .imagenes .colaborador figure{
+    margin: 0;
+}
+
+.postwork .tarjeta .imagenes .colaborador img{
+    width: 100%;
+    max-height: 16vw;  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+
+.postwork .tarjeta .imagenes .compañia{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #f9da73;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.postwork .tarjeta .imagenes .compañia{
+    max-width: 75%;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta{
+    padding: 25px;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta h4{
+    color: #025157;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.postwork .tarjeta .cuerpo-tarjeta h3{
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.postwork .tarjeta .resultados{
+    display: flex;
+    align-items: center;    
+}
+
+.postwork .tarjeta .resultados img{
+    width: 26px;
+    margin-right: 20px;
+    padding: 0 0 0 20px;
+}
+
+.postwork .tarjeta .resultados p{
+    margin-top: 0%;
+}
+
+.postwork .tarjeta .final-tarjeta{
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.postwork .tarjeta .final.tarjeta button{
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    width: 100%;
+}
+
+.funcionamiento{
+    text-align: center;
+    padding: 5% 10%;
+}
+
+.funcionamiento .titulo{
+    font-size: 50px;
+    color: #025157;
+    font-weight: 400;
+    font-family: Helvetica;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.funcionamiento .descripcion{
+    color: #46484c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+.funcionamiento .descripcion a{
+    color: #64b54b;
+    text-decoration: none;
+}
+
+.funcionamiento button{
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 20px;
+    height: 45px;
+    margin-top: 6px;
+}
+
+.funcionamiento .pasos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 70px;
+}
+
+.funcionamiento .carta-pasos{
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.funcionamiento .carta-pasos-imagen{
+    position: relative;
+    height: 350px;
+}
+
+.funcionamiento .carta-pasos-imgn{
+    width: 100%;
+    height: 100%;
+}
+
+.funcionamiento .carta-pasos-icon{
+    position:absolute;
+    top: 25px;
+    left: 25px;
+    width: 21px;
+}
+
+.funcionamiento .carta-pasos-body{
+    padding: 25px;
+}
+
+.funcionamiento .carta-pasos-body h3{
+    font-size: 30px;
+    line-height: 36px;
+    font-family: Helvetica;
+    color: #025157;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.funcionamiento .carta-pasos-body p{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #46484c;
+    font-weight: 400;
+    height: 85px;
+    margin-bottom: 16px;
+}
+
+.funcionamiento .carta-pasos-body a{
+    font-size: 16px;
+    line-height: 1.4;
+    color: #67b54b;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
 }
